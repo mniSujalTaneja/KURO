@@ -1,12 +1,32 @@
-# React + Vite
+# KURO Voice Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KURO is a React-based voice assistant app that understands your commands through **voice input** and **text input**. It responds with helpful, informative, or funny answers by leveraging speech recognition and integrating multiple APIs for weather, jokes, Wikipedia summaries, and math evaluations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Supports both **voice commands** and **text input**  
+- Continuous speech recognition with a “submit” command to process input  
+- Provides real-time weather updates for any city  
+- Fetches jokes and Wikipedia summaries on demand  
+- Evaluates math expressions with humorous and accurate responses  
+- Remembers user data like name and favorite color during the session  
+- Clean, conversational chat UI with auto-scroll and dynamic responses
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React with hooks and custom hooks for modularity  
+- `react-speech-recognition` for voice input and transcript handling  
+- External APIs for weather, jokes, and Wikipedia data  
+- Utility functions for command parsing and math evaluation
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your machine
+
+### Installation
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/your-username/voice-assistant.git
