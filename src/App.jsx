@@ -25,14 +25,10 @@ const App = () => {
   }
 
   return (
-    <div className="w-full h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden relative">
-
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans">
       <Header />
 
-      {/* Chat area wrapper — FIXED OVERLAP ISSUE */}
-      <div className="flex-1 overflow-y-auto pt-24 pb-36 pointer-events-none">
-        <ChatWindow chat={chat} bottomRef={bottomRef} />
-      </div>
+      <ChatWindow chat={chat} bottomRef={bottomRef} />
 
       <FooterControls
         input={input}

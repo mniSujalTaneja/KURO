@@ -1,21 +1,26 @@
-import ChatBubble from './ChatBubble';
+export default function ChatBubble({ role, text }) {
+  const isUser = role === 'user';
 
-export default function ChatWindow({ chat, bottomRef }) {
   return (
-    <div className="flex-1 overflow-y-auto px-4 py-6 pt-2 pb-6 space-y-4 pointer-events-auto">
-      {chat.length === 0 ? (
-        <div className="text-center text-cyan-400 text-lg italic">
-          Hi! I’m <span className="font-bold text-white">KURO</span>. Ask me anything or say “submit” after speaking!
+    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} w-full`}>
+      <div
+        className={`
+          px-4 py-3 rounded-2xl max-w-[80%] md:max-w-[70%] text-sm md:text-base
+          bg-white/10 backdrop-blur-md border border-white/10
+          ${isUser
+            ? 'text-blue-300 shadow-md shadow-blue-500/20'
+            : 'text-cyan-300 shadow-md shadow-cyan-400/20'}
+          transition-all
+        `}
+      >
+        <div className="text-xs font-semibold mb-1 opacity-70 tracking-wide">
+          {isUser ? 'You' : 'KURO'}
         </div>
-      ) : (
-        chat.map((entry, index) => (
-          <div key={index} className="flex flex-col gap-2">
-            <ChatBubble role="user" text={entry.question} />
-            <ChatBubble role="bot" text={entry.answer} />
-          </div>
-        ))
-      )}
-      <div ref={bottomRef} className="h-4" />
+        <div className={text === 'thinking...' ? 'animate-pulse italic' : ''}>
+          {text}
+        </div>
+      </div>
     </div>
   );
 }
+    
