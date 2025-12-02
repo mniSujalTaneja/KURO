@@ -25,7 +25,7 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white font-sans relative overflow-hidden">
       <Header />
 
       <ChatWindow chat={chat} bottomRef={bottomRef} />
