@@ -1,4 +1,4 @@
-// App.jsx
+// App.js
 import React from 'react'
 import useVoiceAssistant from './hooks/useVoiceAssistant'
 
@@ -27,15 +27,13 @@ const App = () => {
   return (
     <div className="w-full h-screen flex flex-col bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden relative">
 
-      {/* FIXED HEADER */}
       <Header />
 
-      {/* SCROLLABLE CHAT AREA */}
-      <div className="flex-1 overflow-y-auto pt-20 pb-28">
+      {/* Chat area wrapper — FIXED OVERLAP ISSUE */}
+      <div className="flex-1 overflow-y-auto pt-24 pb-36 pointer-events-none">
         <ChatWindow chat={chat} bottomRef={bottomRef} />
       </div>
 
-      {/* FIXED FOOTER */}
       <FooterControls
         input={input}
         setInput={setInput}
@@ -44,9 +42,7 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
 
-      {/* VOICE INDICATOR */}
       <VoiceIndicator listening={listening} />
-
     </div>
   )
 }

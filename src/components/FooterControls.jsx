@@ -8,14 +8,17 @@ export default function FooterControls({
   handleSubmit,
 }) {
   return (
-    <footer className="
-      fixed bottom-0 left-0 w-full 
-      bg-white/5 backdrop-blur-md 
-      border-t border-white/10 shadow-inner 
-      p-3 
-      flex flex-col gap-2
-      z-[99999]
-    ">
+    <footer
+      className="
+        fixed bottom-0 left-0 w-full 
+        bg-white/5 backdrop-blur-md 
+        border-t border-white/10 shadow-inner 
+        p-3 
+        flex flex-col gap-2
+        z-[99999]
+        pointer-events-auto
+      "
+    >
 
       {/* INPUT ROW */}
       <div className="w-full flex">
@@ -24,7 +27,7 @@ export default function FooterControls({
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.key === 'Enter') {
               e.preventDefault();
               handleSubmit(input);
             }
@@ -79,7 +82,6 @@ export default function FooterControls({
           <span style={{ fontFamily: "Material Symbols Rounded" }}>send</span>
           Submit
         </button>
-
       </div>
     </footer>
   );
