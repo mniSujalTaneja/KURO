@@ -1,12 +1,4 @@
-export default function FooterControls({
-  input,
-  setInput,
-  listening,
-  toggleListening,
-  handleSubmit
-}) {
-  return (
-    <footer className="fixed bottom-0 left-0 w-full bg-white/5 backdrop-blur-md border-t border-white/10 shadow-inner p-4 flex flex-col md:flex-row gap-2 z-[99999]">
+<footer className="fixed bottom-0 left-0 w-full bg-white/5 backdrop-blur-md border-t border-white/10 shadow-inner p-4 flex flex-row items-center justify-center gap-2 flex-wrap z-[99999]">
       
       <input
         type="text"
@@ -19,7 +11,7 @@ export default function FooterControls({
           }
         }}
         placeholder="Type or speak..."
-        className="flex-1 bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        className="flex-1 min-w-[40%] bg-white/10 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
       />
 
       <button
@@ -44,6 +36,4 @@ export default function FooterControls({
         <span style={{ fontFamily: 'Material Symbols Rounded' }}>send</span>
         Submit
       </button>
-    </footer>
-  );
-}
+</footer>
