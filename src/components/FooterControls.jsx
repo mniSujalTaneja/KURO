@@ -1,6 +1,13 @@
-export default function FooterControls({ input, setInput, listening, toggleListening, handleSubmit }) {
+export default function FooterControls({
+  input,
+  setInput,
+  listening,
+  toggleListening,
+  handleSubmit
+}) {
   return (
-    <footer className="bg-white/5 backdrop-blur-md border-t border-white/10 shadow-inner p-4 flex flex-col md:flex-row gap-2 sticky bottom-0 z-[9999] pointer-events-auto">
+    <footer className="fixed bottom-0 left-0 w-full bg-white/5 backdrop-blur-md border-t border-white/10 shadow-inner p-4 flex flex-col md:flex-row gap-2 z-[99999]">
+      
       <input
         type="text"
         value={input}
@@ -18,10 +25,11 @@ export default function FooterControls({ input, setInput, listening, toggleListe
       <button
         onClick={toggleListening}
         className={`px-4 py-2 rounded-full font-semibold transition text-white flex items-center gap-2
-          ${listening
+        ${
+          listening
             ? 'bg-gradient-to-r from-red-500 to-pink-500 hover:brightness-110'
             : 'bg-gradient-to-r from-blue-500 to-cyan-400 hover:brightness-110'
-          }`}
+        }`}
       >
         <span style={{ fontFamily: 'Material Symbols Rounded' }}>
           {listening ? 'stop_circle' : 'mic'}
