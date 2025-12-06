@@ -1,6 +1,6 @@
 export default function FooterControls({ input, setInput, listening, toggleListening, handleSubmit }) {
   return (
-    <footer className="bg-white/5 backdrop-blur-md border-t border-white/10 shadow-inner p-4 flex flex-col md:flex-row gap-2 fixed bottom-0 left-0 w-full z-[9999]">
+    <footer className="bg-white/5 backdrop-blur-md border-t border-white/10 shadow-inner p-4 flex flex-col md:flex-row gap-2 fixed bottom-0 left-0 w-full z-[1000]">
       <input
         type="text"
         value={input}
@@ -17,7 +17,7 @@ export default function FooterControls({ input, setInput, listening, toggleListe
 
       <button
         onClick={toggleListening}
-        className={`px-4 py-2 rounded-full font-semibold transition text-white flex items-center gap-2
+        className={`z-[9999] px-4 py-2 rounded-full font-semibold transition text-white flex items-center gap-2
           ${listening
             ? 'bg-gradient-to-r from-red-500 to-pink-500 hover:brightness-110'
             : 'bg-gradient-to-r from-blue-500 to-cyan-400 hover:brightness-110'
