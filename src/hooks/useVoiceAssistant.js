@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-import fetchJoke from '../utils/fetchJoke';
-import fetchWikiSummary from '../utils/fetchWikiSummary';
-import extract from '../utils/extract';
-import evaluate from '../utils/evaluate';
-import funnyMathResponse from '../funnyResponses/funnyMathResponse';
-import funnyTimeResponse from '../funnyResponses/funnyTimeResponse';
-import fetchWeather from '../utils/fetchWeather';
+import fetchJoke from '../utils/fetchJoke.js';
+import fetchWikiSummary from '../utils/fetchWikiSummary.js';
+import extract from '../utils/extract.js';
+import evaluate from '../utils/evaluate.js';
+import funnyMathResponse from '../funnyResponses/funnyMathResponse.js';
+import funnyTimeResponse from '../funnyResponses/funnyTimeResponse.js';
+import fetchWeather from '../utils/fetchWeather.js';
 
 export default function useVoiceAssistant() {
   const { resetTranscript, transcript, listening, browserSupportsSpeechRecognition } = useSpeechRecognition();

@@ -1,4 +1,4 @@
-import ChatBubble from './ChatBubble';
+import ChatBubble from './ChatBubble.jsx';
 
 export default function ChatWindow({ chat, bottomRef }) {
   return (

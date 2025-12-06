@@ -1,12 +1,12 @@
 // App.js
 import React from 'react'
-import useVoiceAssistant from './hooks/useVoiceAssistant'
+import useVoiceAssistant from './hooks/useVoiceAssistant.js'
 
 // Components
-import Header from './components/Header'
-import ChatWindow from './components/ChatWindow'
-import FooterControls from './components/FooterControls'
-import VoiceIndicator from './components/VoiceIndicator'
+import Header from './components/Header.jsx'
+import ChatWindow from './components/ChatWindow.jsx'
+import FooterControls from './components/FooterControls.jsx'
+import VoiceIndicator from './components/VoiceIndicator.jsx'
 
 const App = () => {
   const {
